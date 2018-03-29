@@ -1,13 +1,311 @@
 <head>
+	<Title>Why Lebron James fits the Process</Title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+	<style>
+	a:{
+		color:#046ab4;
+	}
+	a:hover{
+		color:#ec164c;
+	}
+	body {
+		font-family: 'Playfair Display', serif;
+	}
 
-<title>Chris's Github</title>
+		.header { 
+		    background-image: url("img/bball-01.png");
+		    height: 100%;
+		    background-position: center;
+		    background-repeat: repeat;
+			background-size: cover;
+		}
 
+			.story {
+				max-width:75%;
+				margin:50 auto;
+				background-color:white;
+				left:0;
+			}
+
+			.chart {
+				margin:0px;
+				padding-right: 50px;
+			}
+
+			.headline {
+				font-size:60px;
+				text-align:center;
+				padding-bottom:0px:10px;
+				margin:5px;
+
+			}
+			.byline {
+				font-size:18px;
+				text-align:left;
+				margin-left:15px;
+				margin-bottom: 20px;
+			}
+			.body-copy{border-top: 1px dotted #333333;}
+
+			.dek{
+				font-size:26px;
+				text-align:left;
+				margin-bottom:20px;
+			}
+
+	</style>
 </head>
-
 <body>
+	<div class="header"></div>
+	<div class="story">
+		<div class="headline">Why Lebron James Fits The Process</div>
+		<div class="byline">By Chris Linvill</div>
+		<div class="body-copy"> <p class="dek">It has been a grueling six seasons for the city of Philadelphia and hard for many to see the light at the end of the tunnel. After years of the 76ers losing, the city is finally starting to see results from their young stars and now it is time to recruit.</p>
+			
+			<p>Ben Simmons is almost a lock for rookie of the year, Joel Embiid is already making a name for himself as a top center in the league, Dario Saric is starting to flash signs of his true potential and the bench is coming together with some excellent shooters and role players.</p>
 
-<h1> Chris Linvill's Data Jurnalism Projects</h1>
+			<p>With all this being true, it still seems that the 76ers are missing one more piece to complete "The Process." Who may this final piece be? Enter Lebron James, easily the best player in the NBA over the last seven years. </p>
+			
+			<p>The case for James becoming a member of the 76ers can be argued in many ways but first we should look at if the 76ers can afford him with the cap space available. </p>
 
-<p> Reverse Engineering 1</p>
+		</div>
 
+		<div>
+			
+			<canvas id="myChart1" class="chart"></canvas>
+			
+			<script>
+				//Payroll Chart
+				var chart = new Chart(document.getElementById("myChart1"), {
+
+					type:"horizontalBar",
+
+					data: {
+						labels: ["Los Angeles", "Philadelphia" , "Chicago" , "Dallas" ,"Sacremento"],
+
+
+						datasets: [
+
+							{
+
+								label:"Payroll (in Millions)",
+								backgroundColor:"#046ab4",
+								data:[34.5, 43.2, 58.0, 59.9, 61.1],
+								
+
+
+							},
+
+							
+
+						]
+
+					},
+
+					//configuration options!!!
+					options: {
+
+						title: {
+							display:true,
+							text: "Lowest Five Teams' Payroll for 2018",
+							fontFamily: "Playfair Display",
+							fontSize:25,
+							fontStyle:200,
+						},
+
+						scales: {
+							yAxes: [{
+								gridLines: {
+									display:false,
+								},
+							}]
+						}
+
+					},
+
+
+				});
+			</script>
+
+			<div>
+			<p>
+				If we look at these five teams, they will be the one paying James the big bucks. When you look at the bigger picture out of these teams, however, only two of them make sense to actually acquire James. Sacramento and Dallas really aren't close to winning anytime soon and Chicago just got rid of Jimmy Butler and it appears to be rebuilding themselves.
+			</p>
+			<p>
+				Why is Philadelphia the better option over Los Angeles? Both teams are young and James could make either one a contender, but he will probably want an easy path to get to the NBA Finals. You don't have that luxury in the West. 
+			</p>
+			<p>
+				The 76ers are already competing with James' current team, the Cavaliers for the third seed in the Eastern Conference. The Lakers would, no doubt, be a playoff team with James, but probably won't be able to get past the Warriors or the Rockets in the playoffs.
+			</p>
+			
+			<p>
+				James has more tools for him to win now, at 33, on the 76ers; instead of a few years down the road when he is in his mid to late 30s.
+			</p>
+			<p>
+				The effect that he has on a team is noticeable even going back to his rookie year, in 2003. James' first year on a team increases the win percentage about 19.9 percent on average and in the chart below it shows.
+			</p>
+
+			<p>Projecting the 76ers finish the season with 48 wins and 34 losses, the effect he could have on the team next year is shown.</p>
+		</div>
+			<div>
+				<canvas id="myChart2" class="chart"></canvas>
+			<script>
+
+				//Win % graphic
+
+				var chart = new Chart(document.getElementById("myChart2"), {
+ 
+			type:"bar",
+
+			data: {
+				labels: ["Cleveland", "Miami" , "Cleveland (return)" ,"Philadelphia (projected)"  ,],
+
+				datasets: [
+
+					{
+
+						label:"Win Percentage the Year Before James",
+						backgroundColor:"#ec164c",
+						data:[20.7, 57.3, 40.2, 58.5],
+
+					},
+					{
+						label:"Win Percentage James' First Year",
+						backgroundColor:"#046ab4",
+						data:[42.7, 70.7, 64.6, 73.2],
+					}
+
+					
+
+				]
+
+			},
+
+			//configuration options!!!
+			options: {
+
+				title: {
+					display:true,
+					text: "Win Percentage Before and After Lebron Arrival",
+					fontFamily: "Playfair Display",
+					fontSize:25,
+					fontStyle:200,
+				},
+
+				scales: {
+					yAxes: [{
+						gridLines: {
+							display:false,
+						},
+					}]
+				}
+
+			},
+
+
+		});
+	</script>
+		</div>
+		
+		<div>
+			<p>
+			It is obvious what type of success that James brings with him the first season he is on the team. With another superstar joining the ranks of the 76ers it would instantly make Philadelphia a contender for the NBA Finals.
+			</p>
+
+			<p>
+				Since James is not getting any younger, another reason that Philadelphia's young talent would help him in the long run is the usage rate that will drop. Usage rate is essentially the possessions that end with a player; by assist, turnover, shot or foul.
+
+			</p>
+
+			<p>
+				This statistic is a good indication of how much the player has the ball in his hands. A lower usage rate means that on offense the player can rely on his teammates more and this in turn can help to extend James' career. </p>
+
+				<p>When Kyrie Irving was on the Cavaliers in the 2016-2017 season, his usage rate was 29.9 and James' usage rate was 30.1, a little bit lower than it is now. With four players currently  on the 76ers with a usage rate of 20 or higher (assuming JJ Redick stays), The usage rate for James will be even lower than it was when him and Irving were on the same team.
+				</p>
+
+				<p> With the usage rate of Embiid and Simmons this year, if James were in the lineup next year this is what it could look like. </p>
+				 </div>
+
+			<div>
+				<canvas id="myChart3" class="chart"></canvas>
+			<script>
+
+				//Usage Rate Graphic
+
+				var chart = new Chart(document.getElementById("myChart3"), {
+ 
+			type:"line",
+
+			data: {
+				labels: ["Lebron James", "Joel Embiid" , "Ben Simmons"],
+
+				datasets: [
+
+					{
+						label:"Projected Usage Rate",
+						backgroundColor:"#ec164c",
+						data:[27, 28, 24,],
+					},
+					{
+
+						label:"Usage Rate",
+						backgroundColor:"#046ab4",
+						data:[31.4, 32.0, 23.6,],
+
+					},
+					
+
+					
+
+				]
+
+			},
+
+			//configuration options!!!
+			options: {
+
+				title: {
+					display:true,
+					text: "Current Usage Rate vs. Projected Usage rate with James on 76ers",
+					fontFamily: "Playfair Display",
+					fontSize:25,
+					fontStyle:200,
+				},
+
+				scales: {
+					yAxes: [{
+						gridLines: {
+							display:false,
+						},
+					}]
+				}
+
+			},
+
+
+		});
+	</script>
+		</div>
+		<div>
+			<p>
+				This could be the key to James extending his career and younger teammates will certainly do that.
+			</p>
+			<p>
+				There are other reasons that James might like Philadelphia over other suitors. One of the biggest things may be good bench players. 
+			</p>
+			<p>
+			The 76ers recently acquired Marco Belinelli and Ersan Ilyasova and instantly the team saw an increase in bench production with the two veteran shooters. James has been recruiting shooters ever since he went to Miami with the like of Ray Allen and in Cleveland he recruited Kyle Korver.</p>
+
+			<p> 
+			Not only do Ilyasova and Belinelli make the bench better but Markelle Fultz has officially been put back into the lineup and still has high potential as a scorer in the league. Another thing that would benefit James as a Sixer is if the team could hold onto Redick at a cheaper price, knowing he could finally be on a championship team. </p>
+
+			<p> 
+			Of course, not every 76ers fan wants James to come to Philly, it seems to be split, but we have to make sure one thing happens if he does decide to sign with the team this offseason. He has to know that the team is not his and that may be the one thing that turns him the other way. </p>
+			<p>
+			The city has a team with a strong core and we may be one piece away from winning a championship, however, we don't need that core broken up in any way. The future is bright for the city, not just a few years, but possibly the next 10.</p>
+
+		</div>
+		<div> <p> Here is the <a  href="https://docs.google.com/spreadsheets/d/1F9CNh8Et3NRkttaZ9KlwJ5xvlSRX47-Z0-9d_GmPJaQ/edit?usp=sharing">data set</a> used to gather the information for this story.
+		</div>
 </body>
